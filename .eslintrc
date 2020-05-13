@@ -1,0 +1,34 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "extends": [
+    "airbnb-typescript",
+    "airbnb/hooks",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["@typescript-eslint", "prettier"],
+  "rules": {
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.spec.tsx", "**/*.spec.ts", "**/features/**/*.ts"]}],
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": 0,
+    "import/prefer-default-export": 0,
+    "@typescript-eslint/member-delimiter-style": 0,
+    "@typescript-eslint/semi": 0,
+    "@typescript-eslint/space-before-function-paren": 0,
+    "no-underscore-dangle": 0,
+    "@typescript-eslint/interface-name-prefix": 0,
+    "@typescript-eslint/no-empty-interface": 0,
+    "no-cond-assign": ["error", "except-parens"],
+    "max-classes-per-file": 0,
+    "lines-between-class-members": 0
+  },
+  "env": {
+    "browser": true,
+    "jest": true
+  }
+}

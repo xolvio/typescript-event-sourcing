@@ -1,0 +1,23 @@
+name: CI
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-16.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: bahmutov/npm-install@v1
+      - run: npm run type-check
+      - run: npm run test
+      - uses: paambaati/codeclimate-action@v2.6.0
+        env:
+          CC_TEST_REPORTER_ID: 8363f6771695c1066fba12480279030cf48383ac795fd50fd153178f0af45a98
+        with:
+          coverageLocations: |
+            ${{github.workspace}}/coverage/jest/lcov.info:lcov
+            ${{github.workspace}}/coverage/cucumber/lcov.info:lcov
+          debug: true
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+#        run: npx semantic-release

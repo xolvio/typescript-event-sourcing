@@ -1,0 +1,126 @@
+{
+  "name": "event-sourcing-cqrs-with-typescript",
+  "author": "Sam Hatoum",
+  "contributors": [
+    "Joshua Ohlman"
+  ],
+  "version": "0.0.0-development",
+  "description": "",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "./lib"
+  },
+  "scripts": {
+    "test:unit:watch": "jest --watch",
+    "test:unit": "jest --coverage",
+    "test": "rm -rf coverage && npm run test:unit",
+    "prepublish": "rm -rf lib && npm run build",
+    "build:watch": "npm run build:js -- --watch",
+    "coverage": "echo Coverage already collected using test runs. Github actions code-climate plugin needs this task :/",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build": "npm run build:types && npm run build:js",
+    "build:types": "tsc -p tsconfig-build.json",
+    "build:js": "babel src --out-dir lib --ignore 'src/**/*.spec.ts','src/**/*.spec.tsx' --extensions \".ts,.tsx\" --source-maps inline ",
+    "start:example": "parcel ./example/public/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xolvio/xspecs-ng.git"
+  },
+  "files": [
+    "**/lib/*"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "uuid": "^8.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-syntax-decorators": "^7.8.3",
+    "@babel/preset-env": "^7.2.3",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.9.0",
+    "@testing-library/dom": "^7.2.1",
+    "@testing-library/jest-dom": "^5.1.0",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^25.1.1",
+    "@types/node": "~12.12.23",
+    "@types/parcel-env": "^0.0.0",
+    "@typescript-eslint/eslint-plugin": "^2.29.0",
+    "@typescript-eslint/parser": "^2.29.0",
+    "babel-jest": "^24.9.0",
+    "browserslist": "^4.12.0",
+    "cucumber": "^6.0.5",
+    "cz-conventional-changelog": "3.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-airbnb-typescript": "^7.2.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.0",
+    "expect": "^26.0.1",
+    "husky": "^4.2.1",
+    "jest": "^25.1.0",
+    "lint-staged": "^10.0.7",
+    "nyc": "^15.0.1",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.0.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "regenerator-runtime": "^0.13.5",
+    "semantic-release": "^17.0.7",
+    "sort-package-json": "^1.42.1",
+    "testdouble": "^3.12.5",
+    "ts-node": "^8.8.2",
+    "typescript": "^3.8.3",
+    "watch": "^1.0.2"
+  },
+  "peerDependencies": {
+    "react": ">= 16.8.0"
+  },
+  "keywords": [
+    "react-hooks",
+    "domain-driven-design",
+    "clean-architecture",
+    "cqrs"
+  ],
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
+      "pre-commit": "yarn type-check && yarn test:example:domain && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/*.ts*": [
+      "eslint --fix",
+      "jest --findRelatedTests"
+    ],
+    "example/**/*.ts*": [
+      "eslint --fix",
+      "jest --findRelatedTests"
+    ]
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "<rootDir>/lib"
+    ],
+    "coverageDirectory": "<rootDir>/coverage/jest"
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
