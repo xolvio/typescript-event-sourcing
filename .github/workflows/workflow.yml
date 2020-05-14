@@ -14,10 +14,9 @@ jobs:
         with:
           coverageLocations: |
             ${{github.workspace}}/coverage/jest/lcov.info:lcov
-            ${{github.workspace}}/coverage/cucumber/lcov.info:lcov
           debug: true
-      - name: Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#      - name: Release
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 #        run: npx semantic-release

@@ -1,6 +1,6 @@
 import {Event} from '../../es-cqrs/Event'
 
-export class BranchCreated extends Event {
+export class FileCreated extends Event {
   constructor(
     public readonly aggregateId: string,
     public readonly name: string
@@ -9,7 +9,7 @@ export class BranchCreated extends Event {
   }
 }
 
-export class BranchRenamed extends Event {
+export class FileRenamed extends Event {
   constructor(
     public readonly aggregateId: string,
     public readonly name: string
