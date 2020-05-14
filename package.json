@@ -55,6 +55,7 @@
     "@typescript-eslint/parser": "^2.29.0",
     "babel-jest": "^24.9.0",
     "browserslist": "^4.12.0",
+    "concurrently": "^5.2.0",
     "cucumber": "^6.0.5",
     "cz-conventional-changelog": "3.1.0",
     "eslint": "^6.8.0",
@@ -96,7 +97,7 @@
   "husky": {
     "hooks": {
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
-      "pre-commit": "yarn type-check && yarn test:example:domain && lint-staged"
+      "pre-commit": "concurrently --success all \"yarn type-check\" \"lint-staged\""
     }
   },
   "lint-staged": {
