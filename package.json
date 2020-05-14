@@ -2,7 +2,9 @@
   "name": "event-sourcing-cqrs-with-typescript",
   "author": "Sam Hatoum",
   "contributors": [
-    "Joshua Ohlman"
+    "Joshua Ohlman",
+    "Lukasz Gendecki",
+    "Michal Baranowski"
   ],
   "version": "0.0.0-development",
   "description": "",
