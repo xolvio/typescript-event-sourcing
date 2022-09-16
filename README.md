@@ -143,11 +143,12 @@ As I watched videos, read articles, and parsed code, I wrote down as much of my 
 - Research sagas
 
 ## Useful Links:
-* http://cqrs.nu/Faq
-* https://github.com/gregoryyoung/m-r/tree/master/SimpleCQRS
-* https://github.com/jamuhl/nodeCQRS/blob/master/domain/app/itemAggregate.js
-* https://github.com/JanVanRyswyck/node-m-r
-* https://groups.google.com/forum/#!forum/dddcqrs
-* https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf
-* https://www.youtube.com/watch?v=whCk1Q87_ZI
-* https://gist.github.com/jaceklaskowski/d267bf4176822293e95e
+* CQRS FAQ - http://cqrs.nu/Faq - (seems to be offline, but [here's the cached version](https://webcache.googleusercontent.com/search?q=cache:http://cqrs.nu/Faq&strip=1&vwsrc=0))
+* Greg Young Simple CQRS repo (.Net) - https://github.com/gregoryyoung/m-r/tree/master/SimpleCQRS
+* Node Aggregate Example - https://github.com/jamuhl/nodeCQRS/blob/master/domain/app/itemAggregate.js
+* Greg Young's simple CQRS example written using Node.js - https://github.com/JanVanRyswyck/node-m-r
+* DDD/CQRS Forums - https://groups.google.com/forum/#!forum/dddcqrs
+* CQRS Documents by Greg Young - https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf
+* GregYoung 8 CQRS Class - https://www.youtube.com/watch?v=whCk1Q87_ZI
+* Rough Notes about CQRS and ES - https://gist.github.com/jaceklaskowski/d267bf4176822293e95e
+* Greg Young - CQRS and Event Sourcing - Code on the Beach 2014 - https://www.youtube.com/watch?v=JHGkaShoyNs
