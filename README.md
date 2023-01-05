@@ -1,7 +1,7 @@
+<!--[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 ![CI](https://github.com/xolvio/typescript-event-sourcing/workflows/CI/badge.svg)
-<!--[![Maintainability](https://api.codeclimate.com/v1/badges/640342f38bcd97af7301/maintainability)](https://codeclimate.com/repos/5ebc9a4f49e99a0178002bcd/maintainability)
+[![Maintainability](https://api.codeclimate.com/v1/badges/640342f38bcd97af7301/maintainability)](https://codeclimate.com/repos/5ebc9a4f49e99a0178002bcd/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/640342f38bcd97af7301/test_coverage)](https://codeclimate.com/repos/5ebc9a4f49e99a0178002bcd/test_coverage)-->
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 # DDD, ES & CQRS w/ TS
 ## _Domain Driven Design, Event Sourcing & Command Query Responsibility Segregation with Typescript_ 
